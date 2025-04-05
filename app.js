@@ -1,9 +1,5 @@
 import express from 'express';
 import router from './routes/route.js';
-const examGroupRoute = require('./routes/examGroupRoute');
-
-
-app.use('/', examGroupRoute);
 
 const app = express();
 const PORT = 3000;
