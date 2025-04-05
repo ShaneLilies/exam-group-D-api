@@ -37,3 +37,16 @@ router.put('/exams/:id', (req, res) => {
   
   res.json(exam);
 });
+
+// Create a new exam
+router.post('/exams', (req, res) => {
+  const newExam = {
+    id: exams.length + 1,
+    ...req.body
+  };
+  
+  exams.push(newExam);
+  res.status(201).json(newExam);
+});
+
+export default router;
